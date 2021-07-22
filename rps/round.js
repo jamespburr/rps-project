@@ -48,31 +48,31 @@ class Round{
         let outcome = "";
         if (this.playerSelection == Selections.ROCK && this.computerSelection == Selections.SCISSORS) {
             outcome = Outcomes.PLAYER_WINS
-            game.incrementPlayerWins()
+            
         } 
         else if (this.playerSelection == Selections.ROCK && this.computerSelection == Selections.PAPER) {
             outcome = Outcomes.COMPUTER_WINS;
-            game.incrementComputerWins()
+           
         }
         else if (this.playerSelection == Selections.PAPER && this.computerSelection == Selections.ROCK) {
             outcome = Outcomes.PLAYER_WINS
-            game.incrementPlayerWins()
+        
         }
         else if (this.playerSelection == Selections.PAPER && this.computerSelection == Selections.SCISSORS){
             outcome = Outcomes.COMPUTER_WINS
-            game.incrementComputerWins()
+          
         }   
         else if (this.playerSelection == Selections.SCISSORS && this.computerSelection == Selections.PAPER){
             outcome = Outcomes.PLAYER_WINS
-            game.incrementPlayerWins()
+            
         }
         else if (this.playerSelection = Selections.SCISSORS && this.computerSelection == Selections.ROCK) {
             outcome = Outcomes.COMPUTER_WINS
-            game.incrementComputerWins()
+            
         }
         else if (this.playerSelection == this.computerSelection){
             outcome = Outcomes.TIE
-            game.incrementCountOfTies()
+            
         }
 
         return outcome

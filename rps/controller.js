@@ -57,6 +57,19 @@ function playRound(roundNumber) {
 
     //Play the Round
     let outcome = round.determineWinner();
+    switch(outcome) {
+        case Outcomes.COMPUTER_WINS:
+            game.incrementComputerWins();
+            break
+        case Outcomes.PLAYER_WINS:
+            game.incrementPlayerWins()
+            break
+        case Outcomes.TIE:
+            game.incrementCountOfTies()
+            break
+        default:
+            break  
+    }
 
     //*********************************ADD CODE HERE *************************************/
     // Display the Round Results from the properties stored in the Round object
