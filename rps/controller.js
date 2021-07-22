@@ -60,7 +60,7 @@ function playRound(roundNumber) {
 
     //*********************************ADD CODE HERE *************************************/
     // Display the Round Results from the properties stored in the Round object
-    console.log(outcome + ' wins')
+    console.log('Outcome: ' + outcome)
 }
 
 
@@ -79,12 +79,13 @@ function getPlayerSelection() {
 
     do {
         playerSelection = window.prompt('Enter rock, paper or scissors')
+        if (playerSelection === null) {
+            playerSelection = ""
+        }
         playerSelection = playerSelection.toLowerCase()
     } while (!selectionArray.includes(playerSelection))
 
     return playerSelection
-    
-
-    
+       
 }
 
